@@ -28,13 +28,13 @@ public class Launch extends FragmentActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://twitter.com/intent/follow?screen_name=NASA"));
                     //Uri.parse("twitter://user?screen_name=NASA"));
-                    //Uri.parse("twitter://user?screen_name=timothyhendrik"));
+                    //Uri.parse("twitter://user?screen_name=xxxxx"));
             startActivity(intent);
 
         }catch (Exception e) {
             startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://twitter.com/intent/follow/NASA")));
-                    //Uri.parse("https://twitter.com/#!/timothyhendrik")));
+                    //Uri.parse("https://twitter.com/#!/xxxxxxxxxx")));
         }
     }
 
@@ -55,7 +55,7 @@ public class Launch extends FragmentActivity {
 
         //second way
             //String uri = "https://www.facebook.com/timmy.hartanto";
-//        String uri = "fb://facewebmodal/f?href=https://www.facebook.com/michael.chua.1428"; // put the profile id here
+//        String uri = "fb://facewebmodal/f?href=https://www.facebook.com/"; // put the profile id here
 //        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 //
 //        startActivity(intent);
@@ -81,12 +81,12 @@ public class Launch extends FragmentActivity {
             context.getPackageManager()
                     .getPackageInfo("com.facebook.katana", 0); //Checks if FB is even installed.
             return new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("fb://profile/timmy.hartanto")); //Trys to make intent with FB's URI /254175194653125
+                    Uri.parse("fb://profile/xxxxxx")); //Trys to make intent with FB's URI /254175194653125
         } catch (Exception e) {
             return new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("fb://profile/timmy.hartanto"));
+                    Uri.parse("fb://profile/xxxxx"));
 //            return new Intent(Intent.ACTION_VIEW,
-//                    Uri.parse("https://www.facebook.com/timmy.hartanto")); //catches and opens a url to the desired page
+//                    Uri.parse("https://www.facebook.com/xxxx")); //catches and opens a url to the desired page
         }
     }
 
